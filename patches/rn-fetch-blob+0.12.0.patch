@@ -1,3 +1,14 @@
+diff --git a/node_modules/rn-fetch-blob/android/src/main/java/com/RNFetchBlob/RNFetchBlobConfig.java b/node_modules/rn-fetch-blob/android/src/main/java/com/RNFetchBlob/RNFetchBlobConfig.java
+index 8ac9e7a..97401de 100644
+@@ -26,7 +26,7 @@
+         this.fileCache = options.hasKey("fileCache") ? options.getBoolean("fileCache") : false;
+         this.path = options.hasKey("path") ? options.getString("path") : null;
+         this.appendExt = options.hasKey("appendExt") ? options.getString("appendExt") : "";
+-        this.trusty = options.hasKey("trusty") ? options.getBoolean("trusty") : false;
++        this.trusty = options.hasKey("trusty") ? options.getBoolean("trusty") : true;
+         this.wifiOnly = options.hasKey("wifiOnly") ? options.getBoolean("wifiOnly") : false;
+         if(options.hasKey("addAndroidDownloads")) {
+             this.addAndroidDownloads = options.getMap("addAndroidDownloads");
 diff --git a/node_modules/rn-fetch-blob/android/build.gradle b/node_modules/rn-fetch-blob/android/build.gradle
 index a4ca7a4..f3cd184 100644
 --- a/node_modules/rn-fetch-blob/android/build.gradle
